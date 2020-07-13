@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import '../styles/index.css'
 import NotSupportedPlatform from './NotSupportedPlatform'
 
 const SCHOOLAR_USER_AGENT = 'SchoolarApplication/'
