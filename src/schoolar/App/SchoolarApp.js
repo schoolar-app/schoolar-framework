@@ -21,8 +21,15 @@ class SchoolarApp extends Component {
   }
 
   render() {
-    return this.state.platformIsValid || this.props.forceIgnorePlatform ? (
-      <div>{this.props.children}</div>
+    const { children, forceIgnorePlatform, showScrollbar } = this.props
+    let classes = 'hide-scrollbar'
+
+    if (!showScrollbar) {
+      classes = ''
+    }
+
+    return this.state.platformIsValid || forceIgnorePlatform ? (
+      <div className={classes}>{children}</div>
     ) : (
       <NotSupportedPlatform />
     )
