@@ -25,7 +25,7 @@ class SchoolarApp extends Component {
     const { children, forceIgnorePlatform, showScrollbar } = this.props
     let classes = 'hide-scrollbar'
 
-    if (!showScrollbar) {
+    if (showScrollbar) {
       classes = ''
     }
 
