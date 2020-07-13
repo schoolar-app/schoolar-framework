@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import '../styles/index.css'
+import styles from '../styles/styles.module.css'
 import NotSupportedPlatform from './NotSupportedPlatform'
 
 const SCHOOLAR_USER_AGENT = 'SchoolarApplication/'
@@ -23,14 +23,14 @@ class SchoolarApp extends Component {
 
   render() {
     const { children, forceIgnorePlatform, showScrollbar } = this.props
-    let classes = 'hide-scrollbar'
+    let _classes = styles.hideScrollbar
 
     if (showScrollbar) {
-      classes = ''
+      _classes = ''
     }
 
     return this.state.platformIsValid || forceIgnorePlatform ? (
-      <div className={classes}>{children}</div>
+      <div className={_classes}>{children}</div>
     ) : (
       <NotSupportedPlatform />
     )
