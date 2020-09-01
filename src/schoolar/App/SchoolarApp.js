@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import styles from '../styles/styles.module.css'
 import NotSupportedPlatform from './NotSupportedPlatform'
+import SchoolarRoutes from './SchoolarRoutes'
 
 const SCHOOLAR_USER_AGENT = 'SchoolarApplication/'
 
@@ -29,10 +30,16 @@ class SchoolarApp extends Component {
       _classes = ''
     }
 
-    return this.state.platformIsValid || forceIgnorePlatform ? (
-      <div className={_classes}>{children}</div>
-    ) : (
-      <NotSupportedPlatform />
+    return (
+      <SchoolarRoutes>
+        {this.state.platformIsValid ||
+        window.Schoolar !== undefined ||
+        forceIgnorePlatform ? (
+          <div className={_classes}>{children}</div>
+        ) : (
+          <NotSupportedPlatform />
+        )}
+      </SchoolarRoutes>
     )
   }
 }
