@@ -5,11 +5,11 @@ function SchoolarRoutes({ children }) {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path='/tool/barcode'>
-          <div>Barcode Activity</div>
+        <Route exact path='/'>
+          <div>Barcode Activity testing</div>
         </Route>
+        {children}
       </Switch>
-      {children}
     </BrowserRouter>
   )
 }
