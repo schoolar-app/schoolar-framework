@@ -29,16 +29,12 @@ class SchoolarApp extends Component {
       _classes = ''
     }
 
-    return (
-      <>
-        {this.state.platformIsValid ||
-        window.Schoolar !== undefined ||
-        forceIgnorePlatform ? (
-          <div className={_classes}>{children}</div>
-        ) : (
-          <NotSupportedPlatform />
-        )}
-      </>
+    return this.state.platformIsValid ||
+      window.Schoolar !== undefined ||
+      forceIgnorePlatform ? (
+      <div className={_classes}>{children}</div>
+    ) : (
+      <NotSupportedPlatform />
     )
   }
 }
