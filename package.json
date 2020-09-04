@@ -1,6 +1,6 @@
 {
   "name": "doughnut-ui",
-  "version": "0.0.1-rev",
+  "version": "0.0.2-rev",
   "description": "Doughnut UI",
   "author": "developersunesis",
   "license": "MIT",
@@ -45,9 +45,12 @@
     "prettier": "^2.0.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "^3.4.1"
+    "react-scripts": "^3.4.3"
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "react-css-modules": "^4.7.11"
+  }
 }
