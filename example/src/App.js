@@ -3,7 +3,7 @@ import React from 'react'
 import { Button, SchoolarApp } from 'doughnut-ui'
 
 const App = () => {
-  return <SchoolarApp>
+  return <SchoolarApp forceIgnorePlatform>
       <Button></Button>
     </SchoolarApp>
 }
