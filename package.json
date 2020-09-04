@@ -51,6 +51,8 @@
     "dist"
   ],
   "dependencies": {
+    "@emotion/core": "^10.0.35",
+    "@emotion/styled": "^10.0.27",
     "react-css-modules": "^4.7.11"
   }
 }

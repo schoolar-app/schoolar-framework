@@ -1,6 +1,16 @@
 import React, { Component } from 'react'
-import styles from '../styles/styles.module.css'
 import NotSupportedPlatform from './NotSupportedPlatform'
+import styled from '@emotion/styled'
+
+const SchoolarContainer = styled.div`
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+`
 
 const SCHOOLAR_USER_AGENT = 'SchoolarApplication/'
 
@@ -22,15 +32,10 @@ class SchoolarApp extends Component {
   }
 
   render() {
-    const { children, forceIgnorePlatform, showScrollbar } = this.props
-    let _classes = `${styles.main}`
-
-    if (!showScrollbar) {
-      _classes += ` ${styles.hideScrollbar}`
-    }
-
+    const { children, forceIgnorePlatform } = this.props
+  
     return (
-      <div className={_classes}>
+      <SchoolarContainer>
         {this.state.platformIsValid ||
         window.Schoolar !== undefined ||
         forceIgnorePlatform ? (
@@ -38,7 +43,7 @@ class SchoolarApp extends Component {
         ) : (
           <NotSupportedPlatform />
         )}
-      </div>
+      </SchoolarContainer>
     )
   }
 }
