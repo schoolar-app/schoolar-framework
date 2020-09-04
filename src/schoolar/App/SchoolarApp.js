@@ -23,10 +23,15 @@ class SchoolarApp extends Component {
 
   render() {
     const { children, forceIgnorePlatform, showScrollbar } = this.props
-    let _classes = styles.hideScrollbar
+    let _classes = {
+      ...styles.main
+    }
 
-    if (showScrollbar) {
-      _classes = ''
+    if (!showScrollbar) {
+      _classes = {
+        ..._classes,
+        ...styles.hideScrollbar
+      }
     }
 
     return this.state.platformIsValid ||
