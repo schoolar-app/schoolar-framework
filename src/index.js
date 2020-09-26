@@ -1,7 +1,8 @@
 // @flow
 
+import SchoolarApp from './schoolar'
+
+export default SchoolarApp
+
 export * from './schoolar'
 
-// export const ExampleComponent = ({ text }) => {
-//   return <div className={styles.test}>Example Component: {text}</div>
-// }

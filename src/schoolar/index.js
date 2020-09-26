@@ -1,2 +1,7 @@
 // @flow
-export { default as SchoolarApp } from './App'
+import SchoolarApp from './App'
+
+export default SchoolarApp
+
+export * from './Interfaces'
+
