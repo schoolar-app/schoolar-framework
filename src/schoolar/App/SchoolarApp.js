@@ -33,7 +33,7 @@ class SchoolarApp extends Component {
 
   render() {
     const { children, forceIgnorePlatform } = this.props
-  
+
     return (
       <SchoolarContainer>
         {this.state.platformIsValid ||

@@ -1,7 +1,5 @@
 // @flow
 
-export * from './components'
-
 export * from './schoolar'
 
 // export const ExampleComponent = ({ text }) => {

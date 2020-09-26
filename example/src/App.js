@@ -1,10 +1,9 @@
 import React from 'react'
 
-import { Button, SchoolarApp } from 'doughnut-ui'
+import { SchoolarApp } from 'schoolar-framework'
 
 const App = () => {
   return <SchoolarApp>
-      <Button></Button>
     </SchoolarApp>
 }
 
