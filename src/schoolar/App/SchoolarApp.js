@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import NotSupportedPlatform from './NotSupportedPlatform'
 import styled from '@emotion/styled'
 
-const SchoolarContainer = styled.div`
+const SchoolarContainer = styled.main`
   margin: 0;
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,6 +10,10 @@ const SchoolarContainer = styled.div`
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
 `
 
 const SCHOOLAR_USER_AGENT = 'SchoolarApplication/'

@@ -1,11 +1,10 @@
 import React from 'react'
 
 import SchoolarApp from 'schoolar-framework'
-import { Fab } from 'schoolar-framework'
 
 const App = () => {
-  console.log(Fab)
-  return <SchoolarApp>
+  return <SchoolarApp forceIgnorePlatform>
+    Hello
     </SchoolarApp>
 }
 
